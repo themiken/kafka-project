@@ -1,0 +1,41 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f113f79f393, pid=61605, tid=61620
+#
+# JRE version: OpenJDK Runtime Environment (16.0.1+9) (build 16.0.1+9-24)
+# Java VM: OpenJDK 64-Bit Server VM (16.0.1+9-24, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+# Problematic frame:
+# 
+[timeout occurred during error reporting in step "printing problematic frame"] after 30 s.
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport -p%p -s%s -c%c -d%d -P%P -u%u -g%g -- %E" (or dumping to /home/miken/Documents/Miken/KafkaCourse/KafkaWikimedia/core.61605)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=127.0.0.1:34513 -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant com.miken.demos.kafka.OpenSearchConsumer
+
+Host: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, 8 cores, 15G, Ubuntu 20.04.2 LTS
+Time: Thu Jul 21 21:50:13 2022 -05 elapsed time: 85.556541 seconds (0d 0h 1m 25s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f113817e780):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=61620, stack(0x00007f1109716000,0x00007f1109817000)]
+
+Stack: [0x00007f1109716000,0x00007f1109817000],  sp=0x00007f11098141f0,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+[timeout occurred during error reporting in step "printing native stack"] after 30 s.
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  jdk.internal.misc.Signal.dispatch(I)V+25 java.base@16.0.1
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007f11307e7588
+
+Register to memory mapping:
+
+RAX=
+------ Timeout during error reporting after 120 s. ------
